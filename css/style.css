@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0e1525;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-container {
+  background-color: #1a2235;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(85, 120, 255, 0.2);
+  width: 600px;
+}
+
+header h1 {
+  text-align: center;
+  color: #a5b8ff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.input-container input {
+  padding: 1rem 1rem;
+  border: 1px solid #3e4b70;
+  border-radius: 6px;
+  background-color: #0e1525;
+  color: #5b6eae;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+#task-input {
+  flex: 1.4;
+}
+
+#date-input {
+  flex: 0.8;
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 1;
+}
+
+#add-button {
+  background-color: #7289da;
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#add-button:hover {
+  background-color: #5b6eae;
+  transform: scale(1.05);
+}
+
+/* ===== Error Message ===== */
+.error {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  text-align: center;
+  min-height: 1rem;
+}
+
+/* ===== Action Buttons ===== */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.actions button {
+  background-color: #2e3a59;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.actions button:hover {
+  background-color: #46537a;
+}
+
+/* ===== Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #0e1525;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(30, 40, 70, 0.3);
+}
+
+thead {
+  background-color: #111a2e;
+}
+
+th, td {
+  padding: 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid #1e2a44;
+}
+
+th {
+  color: #9bb2ff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+td {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.no-task {
+  text-align: center;
+  color: #6c7ba8;
+  padding: 1rem 0;
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #5c6b95;
+  border-top: 1px solid #1e2a44;
+  padding-top: 0.8rem;
+}
+
+/* ===== Delete Button ===== */
+table button {
+  background-color: #e74c3c;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+table button:hover {
+  background-color: #c0392b;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .todo-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  #task-input, #date-input {
+    width: 100%;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}
