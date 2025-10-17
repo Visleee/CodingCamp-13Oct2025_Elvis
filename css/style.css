@@ -31,7 +31,6 @@ header h1 {
 }
 
 .input-container {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,27 +39,28 @@ header h1 {
 }
 
 .input-container input {
-  padding: 1rem 1rem;
+  padding: 1rem;
   border: 1px solid #3e4b70;
   border-radius: 6px;
   background-color: #0e1525;
-  color: #5b6eae;
+  color: gray;
   outline: none;
   font-size: 0.9rem;
 }
 
+#date-input {
+  padding-right: 200px;
+  justify-content: space-between;
+  flex: 0.8;
+  color: #9bb2ff;
+  cursor: pointer;
+  padding-right: 1rem;
+  text-indent: 0.3rem;
+  position: relative;
+}
+
 #task-input {
   flex: 1.4;
-}
-
-#date-input {
-  flex: 0.8;
-}
-
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(1);
-  opacity: 1;
 }
 
 #add-button {
@@ -68,9 +68,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border: none;
   outline: none;
   color: black;
-  font-size: 1.6rem;
+  font-size: 1.6rem; 
   font-weight: bold;
-  padding: 0.55rem 1rem;
+  padding: 0.55rem 1.1rem;
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s ease;
@@ -81,7 +81,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   transform: scale(1.05);
 }
 
-/* ===== Error Message ===== */
 .error {
   color: #ff6b6b;
   font-size: 0.9rem;
@@ -89,7 +88,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   min-height: 1rem;
 }
 
-/* ===== Action Buttons ===== */
 .actions {
   display: flex;
   justify-content: space-between;
@@ -111,7 +109,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: #46537a;
 }
 
-/* ===== Table ===== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -125,7 +122,8 @@ thead {
   background-color: #111a2e;
 }
 
-th, td {
+th,
+td {
   padding: 0.9rem;
   text-align: left;
   border-bottom: 1px solid #1e2a44;
@@ -148,17 +146,6 @@ td {
   padding: 1rem 0;
 }
 
-/* ===== Footer ===== */
-footer {
-  margin-top: 1.5rem;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #5c6b95;
-  border-top: 1px solid #1e2a44;
-  padding-top: 0.8rem;
-}
-
-/* ===== Delete Button ===== */
 table button {
   background-color: #e74c3c;
   border: none;
@@ -173,7 +160,15 @@ table button:hover {
   background-color: #c0392b;
 }
 
-/* ===== Responsive ===== */
+footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #5c6b95;
+  border-top: 1px solid #1e2a44;
+  padding-top: 0.8rem;
+}
+
 @media (max-width: 600px) {
   .todo-container {
     width: 90%;
@@ -185,7 +180,8 @@ table button:hover {
     gap: 0.8rem;
   }
 
-  #task-input, #date-input {
+  #task-input,
+  #date-input {
     width: 100%;
   }
 
